@@ -59,7 +59,7 @@ RSpec.describe School, type: :model do
       is_greater_than_or_equal_to(0)
     end
 
-    it 'as a capcaity higer bound' do
+    it 'as a capacity higher bound' do
       should validate_numericality_of(:capacity).
       is_less_than_or_equal_to(52000)
     end

@@ -6,4 +6,13 @@ class Student < ApplicationRecord
 
   # Associations
   belongs_to :school
+
+  def self.by_name
+  end
+  def self.by_student_number
+  end
+  def self.by_gpa
+  end
 end
+ 
+ 
