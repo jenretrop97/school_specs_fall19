@@ -1,9 +1,9 @@
 class SchoolsController < ApplicationController
-  before_action :set_school
+  before_action :set_school, only: [:show, :edit, :update, :destory]
   
   # GET /schools
   def index
-    @schools = @school.all
+    @schools = @School.all
   end
 
   # GET /schools/1
@@ -12,7 +12,7 @@ class SchoolsController < ApplicationController
 
   # GET /schools/new
   def new
-    @school = @school.new
+    @school = @School.new
   end
 
   # GET /schools/edit
@@ -51,7 +51,7 @@ class SchoolsController < ApplicationController
     end
 
     # Only allow a trusted parameter "white list" through.
-    def student_params
-      params.require(:student).permit(:name, :student_number, :gpa)
+    def school_arqms
+      params.require(:school).permit(:name, :address, :principal, :capacity, :private_school)
     end
 end

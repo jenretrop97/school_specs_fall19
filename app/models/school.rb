@@ -11,15 +11,6 @@ class School < ApplicationRecord
  
   # Associations
 has_many :students, dependent: :destroy
- def self.by_name
- end
- def self.by_address
- end
- def self.by_principal
- end
- def self.by_capacity
- end
- def self.by_private_school
- end
+
 end
 

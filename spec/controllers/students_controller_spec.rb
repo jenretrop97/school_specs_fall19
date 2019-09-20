@@ -19,7 +19,7 @@ RSpec.describe StudentsController, type: :controller do
 
   describe "GET #index" do
     it "returns http success" do
-      get :index
+      get :index, params: { student_id: student.id }
       expect(response).to be_successful
     end
   end
